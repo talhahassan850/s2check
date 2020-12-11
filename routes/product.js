@@ -5,7 +5,7 @@ const ProductModel=require("../models/schema");
 router.get('/', async function(req, res, next) {
   let products=await ProductModel.find();//products
   //console.log(products); 
-  res.render('product/list',{title:"Products Table",products});  
+  res.render('product/list',{title:"Edureka's Course List",products});  
    
 });
 
@@ -33,10 +33,10 @@ router.get("/edit/:id", async function (req, res, next) {
 
 router.post("/edit/:id", async function (req, res, next) {
   let product = await ProductModel.findById(req.params.id);
-  product.code = req.body.code;
-  product.size = req.body.size;
-  product.price = req.body.price;
-  product.stuff = req.body.stuff;
+  product.code = req.body.name;
+  product.size = req.body.id;
+  product.price = req.body.duration;
+  product.stuff = req.body.fee;
   await product.save();
   res.redirect("/product");
 });

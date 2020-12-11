@@ -8,18 +8,18 @@ block content
     table.table
         thead
             tr
-                th code
-                th size
-                th price
-                th stuff
-                th action
+                th Course Name
+                th Course id
+                th Course Duration(Hrs)
+                th Course Fee(USD)
+                th Action
         tbody
              each productModel in products
                 tr
-                    td=productModel.code
-                    td=productModel.size
-                    td=productModel.price
-                    td=productModel.stuff
+                    td=productModel.name
+                    td=productModel.id
+                    td=productModel.duration
+                    td=productModel.fee
                     td
                         a(href="/product/delete/"+productModel._id, class="btn btn-danger") Delete
                         a(href="/product/edit/"+productModel._id, class="btn btn-warning") Edit

@@ -4,16 +4,16 @@ block content
     h1 Add New Product
     form(action="/product/add",method="post")
         .form-group
-            label(for="code") Product Code
-            input#code(type="text", class="form-control", name="code")
+            label(for="code") Course Name
+            input#code(type="text", class="form-control", name="name")
         .form-group
-            label(for="size") Product Size
-            input#size(type="text", class="form-control", name="size")
+            label(for="size") Course id
+            input#size(type="text", class="form-control", name="id")
         .form-group
-            label(for="price") Product Price
-            input#price(type="text", class="form-control", name="price")
+            label(for="price") Course Duration
+            input#price(type="text", class="form-control", name="duration")
         .form-group
-            label(for="stuff") Product Stuff
-            input#stuff(type="text", class="form-control", name="stuff")
+            label(for="stuff") Course Fee
+            input#stuff(type="text", class="form-control", name="fee")
         input(type="submit", class="btn btn-info")
     
